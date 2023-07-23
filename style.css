@@ -1,4 +1,6 @@
-
+html{
+  scroll-behavior: smooth;
+}
 
 #hadding{
     font-size: 30px;
