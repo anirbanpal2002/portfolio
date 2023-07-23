@@ -1,0 +1,33 @@
+
+
+#hadding{
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    
+}
+.box{
+  max-width: 310px;
+  max-height: 310px;
+  padding: 2rem;
+  position: relative;
+  background: linear-gradient(to right, red, blue);
+  padding: 3px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.image{
+    border-radius: 50%;
+}
+
+.edu{
+  text-align: center;
+  font-size: 30;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+
+}
+  
+
+
+
