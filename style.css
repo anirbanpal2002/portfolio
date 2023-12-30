@@ -2,7 +2,7 @@ html{
   scroll-behavior: smooth;
 }
 body{
-  animation: transitionIn 1s;
+  animation: transitionIn .75s;
 }
 
 @keyframes transitionIn{
