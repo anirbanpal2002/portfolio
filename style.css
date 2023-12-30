@@ -1,9 +1,31 @@
 html{
   scroll-behavior: smooth;
 }
-body{
-  animation: transitionIn .75s;
+
+
+
+#section1{
+  animation: transitionIn 0.75s;
+
 }
+
+#section2{
+  animation: transitionIn 0.75s;
+  
+}
+#section3{
+  animation: transitionIn 0.75s;
+  
+}
+#section4{
+  animation: transitionIn 0.75s;
+  
+}
+#section5{
+  animation: transitionIn 0.75s;
+  
+}
+
 
 @keyframes transitionIn{
   from{
@@ -15,6 +37,7 @@ to{
     transform: translateY(0);
 }
 }
+
 #hadding{
     font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
