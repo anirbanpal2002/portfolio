@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init({
+        publicKey: "vXECjelhc5NIwJOIX",
+      });
+   })();
+</script>
 </head>
 <body>
   <header class="text-gray-400 bg-gray-900 body-font  sticky top-0 z-40">
@@ -453,7 +464,8 @@
                   </div>
                 </div>
               
-                <form onsubmit="sendEmail();reset();return false";>
+                <!-- <form onsubmit="sendEmail();reset();return false";> -->
+              <form onsubmit="sendEmail();reset();return false">
                 <div class="lg:w-1/1 md:w-1/1 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
                   <h2 class="text-white text-lg mb-1 font-medium title-font ">Contact With Me</h2>
                   <div class="relative mb-4">
@@ -471,17 +483,30 @@
                   <button class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">SEND</button>
                   <p class="text-xs text-gray-400 text-opacity-90 mt-3"></p>
                 </div>
-                </form>
+              </form>
               </div>
-              <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+              <script>
+                function sendEmail(){
+                  let params={
+                    name:document.getElementById("name").value,
+                    email:document.getElementById("email").value,
+                    message:document.getElementById("message").value
+                  }
+                  emailjs.send("service_96srahm","template_35t0qlu",params).then(alert("email sent"))
+                }
+              </script>
+
+              
+              <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
               <script>
                 function sendEmail(){
                   Email.send({
                     Host : "smtp.elasticemail.com",
                     Username : "2002anirbanpal@gmail.com",
-                    Password : "F4451546B04EF3399EA33213E46C9499310E",
-                    To : '2002anirbanpal@gmail.com',
-                    From : '2002anirbanpal@gmail.com',
+                    Password : "A8D4105007724302EBA4F3C0387BCFF95A1C",
+                    To : "2002anirbanpal@gmail.com",
+                    From :"2002anirbanpal@gmail.com",
                     Subject : "First contact from",
                     Body : "Name:" +document.getElementById("name").value
                       +"<br> Emial:" +document.getElementById("email").value
@@ -491,9 +516,10 @@
                 );
                 }
               </script>
-              
+               -->
             </section>
 
+            <!-- 2B1712937C2123530717EB19561F60F2422B -->
             <!-- <footer class="text-gray-400 bg-gray-900 body-font">
               <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
                 <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
