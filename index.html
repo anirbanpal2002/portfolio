@@ -493,6 +493,36 @@
                   }
                   emailjs.send("service_96srahm","template_35t0qlu",params).then(alert("email sent"))
                 }
+
+
+
+                document.addEventListener('contextmenu', function (e) {
+                  e.preventDefault();
+                  console.log('Right-click blocked');
+                });
+              
+                // Block keyboard shortcuts
+                document.addEventListener('keydown', function (e) {
+                  // F12 or Ctrl + F12
+                  if (e.key === 'F12' || (e.ctrlKey && e.key === 'F12')) {
+                    e.preventDefault();
+                    console.log('Blocked F12 / Ctrl + F12');
+                  }
+              
+                  // Ctrl + Shift + I or J (DevTools)
+                  if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) {
+                    e.preventDefault();
+                    console.log('Blocked Ctrl+Shift+I / J');
+                  }
+              
+                  // Ctrl + U (View Source)
+                  if (e.ctrlKey && e.key === 'u') {
+                    e.preventDefault();
+                    console.log('Blocked Ctrl+U');
+                  }
+                });
+                
+                
               </script>
 
               
